@@ -8,7 +8,7 @@ export interface MyLabelProps {
     /**
      * Este es el tamaño de la etiqueta
     */
-    size: 'normal'|'h1'|'h2'|'h3';
+    size: 'normal' | 'h1' | 'h2' | 'h3';
 
     /**
      * Si quiere todo capitalizado
@@ -18,7 +18,7 @@ export interface MyLabelProps {
     /**
      * Colores básicos del botón
     */
-    color?: 'primary'|'secondary'|'tertiary';
+    color?: 'primary' | 'secondary' | 'tertiary';
 
     /**
      * Color personalizado de la fuente
@@ -43,10 +43,10 @@ export const MyLabel = ({
     backgroundColor = 'transparent'
 }: MyLabelProps) => {
     return (
-        <span 
-            className={`label ${ size } text-${ color }`}
+        <span
+            className={`label ${size} text-${color}`}
             style={{ color: fontColor, backgroundColor }}>
-            { allCaps ? label.toUpperCase() : label }
+            {allCaps ? label.toUpperCase() : label}
         </span>
     )
 }
